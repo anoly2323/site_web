@@ -65,3 +65,14 @@ a:hover {
     background-color: #f40612;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
 }
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer-link {
+    color: #fff; /* Couleur noire pour le lien */
+    text-decoration: none;
+    font-weight: bold; /* Optionnel : rend le texte plus gras */
+}
