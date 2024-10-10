@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulaire.css">
+    <title>Formulaire d'inscription</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulaire d'inscription</h1>
+        <form id="inscriptionForm">
+            <label for="pseudo">Pseudo*</label>
+            <input type="text" id="pseudo" name="pseudo" required>
+
+            <label for="motdepasse">Mot de passe*</label>
+            <input type="password" id="motdepasse" name="motdepasse" required>
+
+            <label for="prenom">Prénom*</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Votre Prénom" required>
+
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="avatar">Avatar</label>
+            <input type="file" id="avatar" name="avatar">
+
+            <label for="pays">Pays</label>
+            <select id="pays" name="pays">
+                <option value="Espagne">Espagne</option>
+                <option value="France">France</option>
+                <option value="Belgique">Belgique</option>
+                <option value="Suisse">Suisse</option>
+            </select>
+
+            <label>Quels sont vos fruits préférés ?</label>
+            <div class="fruit-options">
+                <input type="checkbox" id="orange" name="fruits" value="Orange">
+                <label for="orange">🍊</label>
+                <input type="checkbox" id="fraise" name="fruits" value="Fraise">
+                <label for="fraise">🍓</label>
+                <input type="checkbox" id="poire" name="fruits" value="Poire">
+                <label for="poire">🍐</label>
+            </div>
+
+            <label>Civilité</label>
+            <div class="civilite-options">
+                <input type="radio" id="homme" name="civilite" value="Homme" required>
+                <label for="homme">Homme</label>
+                <input type="radio" id="femme" name="civilite" value="Femme" required>
+                <label for="femme">Femme</label>
+            </div>
+
+            <label for="ville">Ville*</label>
+            <input type="text" id="ville" name="ville" required>
+
+            <label for="codePostal">Code Postal*</label>
+            <input type="text" id="codePostal" name="codePostal" required>
+
+            <label for="adresse">Adresse*</label>
+            <textarea id="adresse" name="adresse" required></textarea>
+
+            <label for="dateNaissance">Date de Naissance*</label>
+            <input type="date" id="dateNaissance" name="dateNaissance" required>
+
+            <label for="jauge">Jauge</label>
+            <input type="range" id="jauge" name="jauge" min="0" max="100">
+
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone">
+
+            <label for="recherche">Recherche</label>
+            <input type="text" id="recherche" name="recherche">
+
+            <label for="url">URL</label>
+            <input type="url" id="url" name="url">
+
+            <label for="couleur">Couleur</label>
+            <input type="color" id="couleur" name="couleur" value="#000000">
+
+            <button type="submit">Valider</button>
+        </form>
+        <a href="index.html" class="back-link">Retour à la page d'accueil</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('inscriptionForm');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Empêche la soumission par défaut du formulaire
+
+                // Vérifie si tous les champs obligatoires sont remplis
+                const allFilled = Array.from(form.elements).every(input => {
+                    return (input.required && (input.value.trim() !== '' || (input.type === 'checkbox' && !input.checked))) || !input.required;
+                });
+
+                if (allFilled) {
+                    // Redirection vers la page de confirmation
+                    window.location.href = 'confirmation.html'; // Changez ce chemin si nécessaire
+                } else {
+                    alert("Veuillez remplir tous les champs obligatoires.");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
