@@ -1,4 +1,3 @@
-
 .prenom {
     font-size: 36px;
     font-weight: bold;
@@ -7,7 +6,6 @@
     background-color: #d9534f;
     color: white;
 }
-
 
 body {
     font-family: Arial, sans-serif;
@@ -19,7 +17,6 @@ body {
 .container {
     display: flex;
     justify-content: space-between;
-    background-color: #d9534f;
     padding: 20px;
     color: white;
     text-align: center;
@@ -31,6 +28,13 @@ body {
     color: black;
     padding: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
 }
 
 img {
