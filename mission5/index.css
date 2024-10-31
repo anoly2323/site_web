@@ -10,7 +10,7 @@ body {
     color: #333;
 }
 
-.main-cv {
+.cv {
     width: 800px;
     margin: 20px auto;
     background: #ffffff;
@@ -57,7 +57,7 @@ body {
     padding-bottom: 5px;
 }
 
-.entry {
+.experience {
     overflow: hidden;
     margin-bottom: 8px;
     padding: 5px;
@@ -77,3 +77,17 @@ body {
     line-height: 1.5;
     color: #666;
 }
+
+.link-item {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    color: #e50914; 
+    text-decoration: none; 
+    text-align: center; 
+}
+
+.link-item:hover {
+    color: #b20710; 
+}
+
