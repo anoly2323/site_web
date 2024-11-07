@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identification</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="background-container"></div>
+    <div class="login-container">
+        <h1>Connexion</h1>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="t1">Nom d'utilisateur</label>
+                <input type="text" id="t1" placeholder="Entrez votre nom d'utilisateur" required>
+            </div>
+            <div class="input-group">
+                <label for="h1">Mot de passe</label>
+                <input type="password" id="h1" placeholder="Entrez votre mot de passe" required>
+                <button type="button" id="passwordToggle" onclick="togglePasswordVisibility()">Afficher</button>
+            </div>
+            <div class="buttons">
+                <button type="submit" class="btn" id="submitBtn">Se Connecter</button>
+                <button type="button" class="btn cancel" onclick="resetForm()">Annuler</button><br><br>
+                <a href="..\index.html"><h2>Retour à la page principale</h2></a>
+            </div>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

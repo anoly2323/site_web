@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('1.jpg'); /* Remplacez '1.jpg' par votre image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Applique un flou à l'image de fond */
+    z-index: -1; /* S'assure que l'image de fond reste derrière le contenu */
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc transparent pour lisibilité */
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    z-index: 1; /* Garantit que le formulaire reste au premier plan */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 1.5em;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 1.2em;
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.cancel {
+    background-color: #6c757d;
+}
+
+.cancel:hover {
+    background-color: #495057;
+}
+
+#passwordToggle {
+    background-color: transparent;
+    color: #007bff;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+#passwordToggle:hover {
+    text-decoration: underline;
+}
