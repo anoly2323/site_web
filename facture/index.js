@@ -1,32 +1,39 @@
 function calculateTotal() {
-    let total = 0;
-    let grandTotal = 0;
+    let total1 = document.getElementById('price1').value * document.getElementById('quantity1').value;
+    let total2 = document.getElementById('price2').value * document.getElementById('quantity2').value;
+    let total3 = document.getElementById('price3').value * document.getElementById('quantity3').value;
+    let total4 = document.getElementById('price4').value * document.getElementById('quantity4').value;
 
-    // Calcul pour chaque ligne
-    for (let i = 1; i <= 3; i++) {
-        let price = parseFloat(document.getElementById('price' + i).value);
-        let quantity = parseFloat(document.getElementById('quantity' + i).value);
-        if (!isNaN(price) && !isNaN(quantity)) {
-            total = price * quantity;
-            document.getElementById('result' + i).value = total.toFixed(2);
-            grandTotal += total;
-        } else {
-            document.getElementById('result' + i).value = "";
-        }
-    }
+    document.getElementById('total1').value = total1.toFixed(2);
+    document.getElementById('total2').value = total2.toFixed(2);
+    document.getElementById('total3').value = total3.toFixed(2);
+    document.getElementById('total4').value = total4.toFixed(2);
 
-    // Affichage du total général
-    document.getElementById('totalAmount').textContent = grandTotal.toFixed(2);
+    let grandTotal = total1 + total2 + total3 + total4;
+
+    document.getElementById('totalAmount').innerText = grandTotal.toFixed(2);
 }
 
 function resetForm() {
-    // Réinitialiser tous les champs de saisie
-    for (let i = 1; i <= 3; i++) {
-        document.getElementById('article' + i).value = "";
-        document.getElementById('price' + i).value = "";
-        document.getElementById('quantity' + i).value = "";
-        document.getElementById('result' + i).value = "";
-    }
+    document.getElementById('article1').value = '';
+    document.getElementById('price1').value = '';
+    document.getElementById('quantity1').value = '';
+    document.getElementById('total1').value = '';
 
-    document.getElementById('totalAmount').textContent = "0";
+    document.getElementById('article2').value = '';
+    document.getElementById('price2').value = '';
+    document.getElementById('quantity2').value = '';
+    document.getElementById('total2').value = '';
+
+    document.getElementById('article3').value = '';
+    document.getElementById('price3').value = '';
+    document.getElementById('quantity3').value = '';
+    document.getElementById('total3').value = '';
+
+    document.getElementById('article4').value = '';
+    document.getElementById('price4').value = '';
+    document.getElementById('quantity4').value = '';
+    document.getElementById('total4').value = '';
+
+    document.getElementById('totalAmount').innerText = '0.00';
 }

@@ -3,51 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facture</title>
+    <title>Facture Simple</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="invoice">
+    <div class="facture">
         <h2>Facture</h2>
         <table>
-            <thead>
-                <tr>
-                    <th>Article</th>
-                    <th>Prix</th>
-                    <th>Quantité</th>
-                    <th>Résultat</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><input type="text" id="article1" placeholder="Article 1"></td>
-                    <td><input type="number" id="price1" placeholder="Prix" step="0.01"></td>
-                    <td><input type="number" id="quantity1" placeholder="Quantité"></td>
-                    <td><input type="number" id="result1" placeholder="Total" disabled></td>
-                </tr>
-                <tr>
-                    <td><input type="text" id="article2" placeholder="Article 2"></td>
-                    <td><input type="number" id="price2" placeholder="Prix" step="0.01"></td>
-                    <td><input type="number" id="quantity2" placeholder="Quantité"></td>
-                    <td><input type="number" id="result2" placeholder="Total" disabled></td>
-                </tr>
-                <tr>
-                    <td><input type="text" id="article3" placeholder="Article 3"></td>
-                    <td><input type="number" id="price3" placeholder="Prix" step="0.01"></td>
-                    <td><input type="number" id="quantity3" placeholder="Quantité"></td>
-                    <td><input type="number" id="result3" placeholder="Total" disabled></td>
-                </tr>
-            </tbody>
+            <tr>
+                <th>Article</th>
+                <th>Prix</th>
+                <th>Quantité</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="article1" placeholder="Article 1"></td>
+                <td><input type="number" id="price1" placeholder="Prix" step="0.01"></td>
+                <td><input type="number" id="quantity1" placeholder="Quantité"></td>
+                <td><input type="number" id="total1" disabled></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="article2" placeholder="Article 2"></td>
+                <td><input type="number" id="price2" placeholder="Prix" step="0.01"></td>
+                <td><input type="number" id="quantity2" placeholder="Quantité"></td>
+                <td><input type="number" id="total2" disabled></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="article3" placeholder="Article 3"></td>
+                <td><input type="number" id="price3" placeholder="Prix" step="0.01"></td>
+                <td><input type="number" id="quantity3" placeholder="Quantité"></td>
+                <td><input type="number" id="total3" disabled></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="article4" placeholder="Article 4"></td>
+                <td><input type="number" id="price4" placeholder="Prix" step="0.01"></td>
+                <td><input type="number" id="quantity4" placeholder="Quantité"></td>
+                <td><input type="number" id="total4" disabled></td>
+            </tr>
         </table>
-        <div class="buttons">
-            <button onclick="calculateTotal()">Résultat</button>
-            <button onclick="resetForm()">Réinitialiser</button>
-        </div>
+        <button onclick="calculateTotal()">Calculer</button>
+        <button onclick="resetForm()">Réinitialiser</button>
+        <a href="..\index.html" class="back-button">Retour au Sommaire</a>
         <div id="grandTotal">
             <p>Total général: <span id="totalAmount">0</span> €</p>
-        </div>
-        <div class="back-button-container">
-            <a href="..\index.html" class="back-button">Retour au sommaire</a>
         </div>
     </div>
 
