@@ -35,20 +35,20 @@ h2 {
     border-radius: 5px;
 }
 
-.buttons button, .other-actions button {
+.buttons button, .other-actions button, .back-to-summary button {
     padding: 10px;
     font-size: 16px;
     margin: 5px;
     width: 80%;
-    background-color: #007BFF; 
+    background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.buttons button:hover, .other-actions button:hover {
-    background-color: #0056b3; 
+.buttons button:hover, .other-actions button:hover, .back-to-summary button:hover {
+    background-color: #0056b3;
 }
 
 #result {
@@ -58,4 +58,12 @@ h2 {
 #parity {
     font-weight: bold;
     margin-top: 10px;
+}
+
+.back-to-summary button {
+    background-color: #28a745;
+}
+
+.back-to-summary button:hover {
+    background-color: #218838;
 }
