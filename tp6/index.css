@@ -20,21 +20,21 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('1.jpg'); /* Remplacez '1.jpg' par votre image */
+    background-image: url('1.jpg');
     background-size: cover;
     background-position: center;
-    filter: blur(8px); /* Applique un flou à l'image de fond */
-    z-index: -1; /* S'assure que l'image de fond reste derrière le contenu */
+    filter: blur(8px);
+    z-index: -1;
 }
 
 .login-container {
-    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc transparent pour lisibilité */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 2em;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
-    z-index: 1; /* Garantit que le formulaire reste au premier plan */
+    z-index: 1;
 }
 
 h1 {
@@ -97,5 +97,21 @@ button:hover {
 }
 
 #passwordToggle:hover {
+    text-decoration: underline;
+}
+
+.back-link {
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #007bff;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+}
+
+.back-link a:hover {
     text-decoration: underline;
 }
