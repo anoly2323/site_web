@@ -1,0 +1,74 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    background-color: #3498db; /* Bleu clair */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Main Section */
+.contact-container {
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+}
+
+.contact-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Contact Links */
+.contact-link {
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 250px;
+    text-align: center;
+}
+
+.contact-link:hover {
+    background-color: #2980b9; /* Couleur plus sombre au survol */
+    transform: translateY(-3px); /* Effet de léger mouvement au survol */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-link {
+        width: 80%; /* Adapte la largeur des liens à 80% de l'écran */
+    }
+}

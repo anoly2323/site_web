@@ -1,44 +1,71 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa; /* Une couleur de fond plus douce */
     color: #333;
     margin: 0;
-    padding: 20px;
-    text-align: center;
+    padding: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
 }
 
+/* Header Styles */
 header {
-    background-color: #e50914;
+    background-color: #2C3E50; /* Couleur sombre pour le header */
     color: white;
-    padding: 15px 0;
-    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
 
+header h1 {
+    font-size: 2.5rem; /* Texte plus grand pour le titre */
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Link Container */
 .link-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px; /* Espacement entre les éléments */
 }
 
+/* Link Item Styles */
 .link-item {
     text-decoration: none;
     background-color: #ffffff;
-    color: #e50914;
-    border: 2px solid #e50914;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin: 10px;
-    transition: background-color 0.3s, color 0.3s;
-    flex: 0 1 180px;
+    color: #2C3E50; /* Couleur sombre pour les liens */
+    border: 2px solid #2C3E50;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out; /* Transition fluide */
+    display: inline-block;
+    width: calc(33% - 40px); /* Largeur flexible avec marges */
+    text-align: center;
 }
 
+/* Hover Effects */
 .link-item:hover {
-    background-color: #e50914;
-    color: white;
+    background-color: #2C3E50; /* Changer la couleur de fond au survol */
+    color: #ffffff; /* Changer la couleur du texte au survol */
+    transform: translateY(-3px); /* Effet de mouvement */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre au survol */
 }
 
-@media (max-width: 600px) {
+/* Responsive Design */
+@media (max-width: 768px) {
     .link-item {
-        flex: 0 1 100%;
+        width: calc(50% - 40px); /* À partir de 768px, les liens occupent 50% de l'espace */
+    }
+}
+
+@media (max-width: 480px) {
+    .link-item {
+        width: calc(100% - 40px); /* À partir de 480px, les liens prennent toute la largeur */
     }
 }
